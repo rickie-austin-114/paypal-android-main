@@ -26,9 +26,9 @@ import com.paypal.android.ui.approveorder.ApproveOrderView
 import com.paypal.android.ui.approveorder.ApproveOrderViewModel
 import com.paypal.android.ui.features.FeaturesView
 import com.paypal.android.ui.paypalbuttons.PayPalButtonsView
-import com.paypal.android.ui.paypalstaticbuttons.PayPalStaticButtonsView
+import com.paypal.android.ui.paypalstaticbuttons.ForumView
 import com.paypal.android.ui.paypalweb.PayPalWebView
-import com.paypal.android.ui.paypalwebvault.PayPalWebVaultView
+import com.paypal.android.ui.paypalwebvault.BluetoothChatView
 import com.paypal.android.ui.selectcard.SelectCardView
 import com.paypal.android.ui.vaultcard.VaultCardView
 import com.paypal.android.ui.vaultcard.VaultCardViewModel
@@ -109,15 +109,17 @@ fun DemoApp() {
                 composable(DemoAppDestinations.PAYPAL_WEB) {
                     PayPalWebView()
                 }
+
                 composable(DemoAppDestinations.PAYPAL_WEB_VAULT) {
-                    PayPalWebVaultView()
+                    BluetoothChatView()
                 }
                 composable(DemoAppDestinations.PAYPAL_BUTTONS) {
                     PayPalButtonsView()
                 }
                 composable(DemoAppDestinations.PAYPAL_STATIC_BUTTONS) {
-                    PayPalStaticButtonsView()
+                    ForumView()
                 }
+
                 composable(DemoAppDestinations.SELECT_TEST_CARD) {
                     SelectCardView(onSelectedTestCardChange = { testCardId ->
                         val prevBackStackEntry = navController.previousBackStackEntry

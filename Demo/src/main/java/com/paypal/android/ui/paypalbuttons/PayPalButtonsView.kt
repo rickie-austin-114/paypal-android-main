@@ -30,10 +30,13 @@ import com.paypal.android.R
 import com.paypal.android.paymentbuttons.PayLaterButton
 import com.paypal.android.paymentbuttons.PayPalButton
 import com.paypal.android.paymentbuttons.PayPalButtonColor
+import com.paypal.android.paymentbuttons.PayPalButtonLabel
 import com.paypal.android.paymentbuttons.PayPalCreditButton
 import com.paypal.android.paymentbuttons.PayPalCreditButtonColor
 import com.paypal.android.paymentbuttons.PaymentButton
 import com.paypal.android.paymentbuttons.PaymentButtonColor
+import com.paypal.android.paymentbuttons.PaymentButtonShape
+import com.paypal.android.paymentbuttons.PaymentButtonSize
 import com.paypal.android.uishared.components.IntSlider
 import com.paypal.android.utils.UIConstants
 
@@ -58,6 +61,9 @@ fun PayPalButtonsView(viewModel: PayPalButtonsViewModel = viewModel()) {
             color = Color.Black,
             style = MaterialTheme.typography.titleLarge,
         )
+
+
+
         PayPalButtonFactory(uiState = uiState)
         Text(
             text = stringResource(id = R.string.pay_pal_button_options),
